@@ -1,0 +1,4 @@
+1. Get the RNL flow data
+2. Train the RNL-SL control model by using myCNN_torch.py
+3. Test the RNL-SL model by using myCNN_torch_testing.py
+4. Use RNL-SL model to control the DNS flow by using codes in the folder of DNS-Control 
