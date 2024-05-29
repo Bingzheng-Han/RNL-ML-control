@@ -1,0 +1,2 @@
+1. Training and control processes are carried out in RNL flow field at the same time by running the CFD_Solver_Example.f90
+2. Use the well-trained RNL-RL control model to control the DNS flow field
