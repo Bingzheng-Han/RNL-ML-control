@@ -57,8 +57,8 @@ def pymodel(frs, shape1_s, shape2_s, fra, shape1_a, shape2_a, frr, shape1_r, sha
         a_ = np.random.normal(a_, var) # add randomness to action selection for exploration
 
         if int(step) % (ddpg.state_step) ==0:
-            weights=ddpg.actor.state_dict()['layer1.0.weight'].numpy()
-            r=r-abs(sum(np.squeeze(weights)))
+            # weights=ddpg.actor.state_dict()['layer1.0.weight'].numpy()
+            # r=r-abs(sum(np.squeeze(weights)))
             ddpg.replay_buffer.push((s, a, r, s_))
             ddpg.pointer += 1
             ep_reward += r
