@@ -113,7 +113,7 @@ subroutine UPDATENN
     if (mod(NTIME,state_step)==0) then ! state_step=50
         REWARD=REWARD_period / state_step
         Reward_epoch(mod(NTIME/state_step,ep_step))=REWARD
-        call pymodel(state,128,128,action,128,128,REWARD,1,1,DWDY,128,128,real(NTIME),1,1)
+        call pymodel(state,16,128,action,16,128,REWARD,1,1,DWDY,16,128,real(NTIME),1,1)
         state = DWDY ! here the state is the next state (s_) after the action 
         action = action
         REWARD_period = 0.0
